@@ -17,9 +17,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       // Opcional: Agregué la información de los pases a la tarjeta para que la veas
       card.innerHTML = `
-        <div class="name"><strong>${invitado.nombre}</strong></div>
+        <div class="info">
+          <div class="name"><strong>${invitado.nombre}</strong></div>
+          <div class="link"><a href="${link}" target="_blank">Abrir invitación</a></div>
+        </div>
         <div class="pases">Adultos: ${invitado.pasesAdulto} | Niños: ${invitado.pasesNino}</div>
-        <div class="link">${link}</div>
+        
 
         <div class="buttons">
           <button class="copy">📋 Copiar</button>
