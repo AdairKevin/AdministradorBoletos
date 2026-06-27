@@ -1,72 +1,168 @@
- body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #010101;
-        color: white;
-      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      header {
-        padding: 15px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: bold;
-        background: #010101;
-        position: sticky;
-        top: 0;
-      }
+body {
+  font-family:
+    Segoe UI,
+    sans-serif;
+  background: #07152d;
+  background-image: radial-gradient(
+    circle at top,
+    #3f82ff20 0%,
+    transparent 45%
+  );
+  color: #fff;
+}
 
-      .container {
-        padding: 15px;
-      }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
-      .card {
-        background: #252525;
-        padding: 15px;
-        border-radius: 12px;
-        margin-bottom: 12px;
-      }
+  padding: 14px;
 
-      .name {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
+  text-align: center;
 
-      .link {
-        font-size: 12px;
-        word-break: break-all;
-        margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
 
-        a{
-            color: #5aafff;
-        }
-      }
+  background: rgba(8, 20, 45, 0.9);
+  backdrop-filter: blur(15px);
 
-      .pases {
-        font-size: 15px;
-        margin-bottom: 10px;
-      }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-      .buttons {
-        display: flex;
-        gap: 10px;
-      }
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding: 12px;
+}
 
-      button {
-        flex: 1;
-        padding: 10px;
-        border: none;
-        border-radius: 8px;
-        font-size: 13px;
-        cursor: pointer;
-      }
+/*======================*/
 
-      .copy {
-        background: #666666;
-        color: white;
-      }
+.card {
+  background: #102549;
 
-      .whatsapp {
-        background: #25d366;
-        color: white;
-      }
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  margin-bottom: 10px;
+
+  transition: 0.25s;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+
+  border-color: #69a9ff;
+}
+
+/*======================*/
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.pases {
+  display: inline-block;
+
+  font-size: 13px;
+
+  padding: 4px 10px;
+
+  border-radius: 20px;
+
+  background: #1d427d;
+
+  color: #b9d8ff;
+
+  margin-bottom: 10px;
+}
+
+.link {
+  font-size: 12px;
+
+  margin-bottom: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link a {
+  color: #82c0ff;
+
+  text-decoration: none;
+}
+
+/*======================*/
+
+.buttons {
+  display: flex;
+
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+
+  height: 38px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.copy {
+  background: #2b63b7;
+
+  color: white;
+}
+
+.whatsapp {
+  background: #25d366;
+
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/*======================
+      ESCRITORIO
+======================*/
+
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+
+    gap: 14px;
+  }
+
+  .card {
+    margin: 0;
+  }
+}
